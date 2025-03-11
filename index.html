@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/d96490c9a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="#header">Portfo<span>lio.</span></a></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2"><span>Akshat </span>Singh</div>
+                <div class="text-3">And I'm a <span id="animated-text"></span><span class="cursor">|</span></div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- -----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/AboutMe.png" alt="me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a dedicated and innovative developer with a strong passion for creating impactful digital solutions. Driven by curiosity and a problem-solving mindset, I continuously seek to expand my knowledge and refine my skills. My focus is on delivering efficient, well-crafted solutions while embracing new challenges and technological advancements. I thrive in collaborative environments and enjoy turning ideas into reality through clean and scalable development. With a commitment to continuous learning, I strive to stay ahead in the ever-evolving tech landscape.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages/Database - </span><br>C++, C, Kotlin, XML, Java, JavaScript, SQL</li>
+                            <li><span>Technologies/Frameworks - </span><br>GitHub, Git, Room Database, Retrofit, Firebase, Jetpack Compose, HTML5,
+                                CSS3</li>
+                            <li><span>Coursework/Skills - </span><br>Data Structures and Algorithms, Object-Oriented Programming System</li>
+                            <li><span>Developer Tools - </span><br>VS Code, Android Studio</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <!-- <li><span>2021-current</span><br>Design App</li>
+                            <li><span>Android Development</span><br>Design App</li>
+                            <li><span>Android Development</span><br>Design App</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Undergraduate </span><br>Vellore Institute of Technology, Vellore</li>
+                            <li><span>Class 12:</span><br>MDS Public School, Udaipur</li>
+                            <li><span>Class 10:</span><br>Maharana Mewar Public School, Udaipur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- -----------SERVICES---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Development</h2>
+                    <p>App development involves designing and building intuitive, high-performance applications tailored for mobile and desktop platforms. It encompasses UI/UX design, efficient code structuring, and integration of various features to enhance functionality and user engagement. The development process ensures scalability, security, and seamless performance across different devices and operating systems.</p>
+                    <a href="#services">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-globe"></i>
+                    <h2>Web Development</h2>
+                    <p>Frontend web development focuses on creating visually engaging, responsive, and user-friendly interfaces. It involves translating design concepts into interactive web pages using modern technologies while ensuring cross-browser compatibility, performance optimization, and accessibility. Emphasis is placed on clean code, maintainability, and seamless user experience.</p>
+                    <a href="#services">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-uikit"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>UI/UX design focuses on crafting intuitive, aesthetically pleasing, and user-centric digital experiences. It involves designing seamless interfaces, optimizing usability, and enhancing user interaction through thoughtful layouts, color schemes, typography, and navigation. The goal is to create visually engaging and functional designs that improve accessibility, engagement, and overall user satisfaction.</p>
+                    <a href="#services">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- -----------Projects---------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/chatroom.jpg">
+                    <div class="layer">
+                        <h3>ChatConnect: Real-Time Chatroom App</h3>
+                        <p>
+                            <ul>
+                                <li>Developed a dynamic chatroom platform designed to facilitate seamless and interactive communication,allowing users to create, explore, and participate in real-time conversations.</li>
+                                <li>With a strong focus on user security and privacy, the platform integrates a secure authentication system, enabling users to sign up and log in effortlessly. Data integrity is maintained through robust accessncontrols, ensuring a safe and reliable environment for communication.</li>
+                                <li>The intuitive and responsive user interface enhances usability by providing a modern chat experience with customizable features. Users can send messages instantly, manage chatrooms efficiently, and engage in discussions without interruptions.</li>
+                            </ul>
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/recipe.jpg">
+                    <div class="layer">
+                        <h3>Recipe App</h3>
+                        <p>
+                            <ul>
+                                <li>A seamless recipe discovery platform that fetches and displays food categories and detailed recipes from a remote API, ensuring smooth navigation and structured data representation.</li>
+                                <li>Built with MVVM architecture, Retrofit for efficient network calls, and Jetpack Compose for an engaging UI, enabling users to explore recipes effortlessly with smooth interactions.</li>
+                            </ul>
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/OrganizeX.jpg">
+                    <div class="layer">
+                        <h3>OrganizeX</h3>
+                        <p>
+                            <ul>
+                                <li>OrganizeX provides a structured and efficient way to organize and track items, ensuring seamless
+                                offline accessibility with Room Database for reliable data storage and management.</li>
+                                <li>The app features a modern and responsive UI built with Jetpack Compose, integrating Scaffold layout, a Floating Action Button (FAB), and smooth navigation for an enhanced user experience.</li>
+                                <li>MVVM architecture with ViewModel and Kotlin Coroutines ensures optimized state management, smooth
+                                data handling, and UI responsiveness, while Swipe to Delete and Snackbar notifications improve
+                                usability.</li>
+                            </ul>
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/akshatksingh-25" target="_blank" class="btn btn1">See more</a>
+        </div>
+    </div>
+
+
+<!-- -----------Contact---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-user"></i> Akshat Singh</p>
+                    <p><i class="fa-solid fa-envelope"></i> akshatksingh25@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-8093947116</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/akshatksingh-25" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="www.linkedin.com/in/akshatksingh25" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/akshatksingh__25/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                    <a href="Akshat Resume.pdf" target="_blank" class="btn btn2">Download CV</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- -------footer-------- -->
+    <footer>
+        <span>Created By <a href="#header">Akshat Singh</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
+    </footer>
+    </div>
+</body>
+</html>
