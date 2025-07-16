@@ -130,6 +130,7 @@ nav ul li a:hover::after {
     background: black url("images/About\ Me.png") center center no-repeat;
     background-size: contain;
     border-radius: 25px;
+    min-height: 500px;
 }
 
 
