@@ -127,8 +127,8 @@ nav ul li a:hover::after {
 
 .about-col-1{
     flex-basis: 35%;
-    background: black url("images/About\ Me.png") center center no-repeat;
-    background-size: contain;
+    background: black url("images/Abt_Me.png") center center no-repeat;
+    background-size: cover;
     border-radius: 25px;
     min-height: 500px;
 }
@@ -145,7 +145,7 @@ nav ul li a:hover::after {
 
 .about-col-2 p{
     font-size: 18px;
-    margin-top: 9px;
+    margin-top: 30px;
     text-align: start;
 }
 
@@ -188,13 +188,17 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li{
-    list-style: none;
+    /* list-style: none; */
     margin: 10px 0;
 }
 
-.tab-contents ul li span{
+.tab-contents ul span{
     font-size: 18px;
     color: #b54769;
+}
+
+#experience ul ul li{
+    font-size: 16px;
 }
 
 .tab-contents{
@@ -280,7 +284,7 @@ nav ul li a:hover::after {
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6),#000000);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -321,6 +325,114 @@ nav ul li a:hover::after {
 
 .work:hover .layer{
     height: 100%;
+}
+
+/* Projects - Flip Card Styles */
+.work-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px; /* Adjust height as needed for content */
+    perspective: 1000px; /* For 3D flip effect */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures content stays within bounds */
+}
+
+.work-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; /* Controls flip speed */
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.work-card:hover .work-card-inner {
+    transform: rotateY(180deg); /* Flip on hover */
+}
+
+.work-card-front, .work-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Hide back of card during flip */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+
+.work-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area */
+    border-radius: 10px;
+    display: block;
+}
+
+.work-card-back {
+    background: #262626; /* Background for the back */
+    color: #fff;
+    transform: rotateY(180deg); /* Initially hidden */
+    text-align: start; /* Align text to start */
+}
+
+.work-card-back h3 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 20px; /* Adjust font size */
+    text-align: center; /* Center the title */
+}
+
+.work-card-back p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow-y: auto; /* Add scroll for longer content */
+    max-height: calc(100% - 70px); /* Adjust based on h3 and a tag height */
+}
+
+.work-card-back p ul {
+    list-style: disc inside; /* Add bullet points */
+    padding-left: 0;
+}
+
+.work-card-back p ul li {
+    margin-bottom: 5px;
+}
+
+.work-card-back a {
+    margin-top: auto; /* Push link to the bottom */
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px; /* Adjusted for better appearance */
+    background: #fff;
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    border-radius: 50%;
+    text-align: center;
+    display: flex; /* Use flex for centering icon */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjustments for responsive design if needed for flip cards */
+@media only screen and (max-width: 600px) {
+    .work-card {
+        height: 250px; /* Adjust height for smaller screens */
+    }
+    .work-card-back h3 {
+        font-size: 18px;
+    }
+    .work-card-back p {
+        font-size: 12px;
+    }
 }
 
 .btn{
